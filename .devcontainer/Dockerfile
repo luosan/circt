@@ -8,3 +8,16 @@ RUN pacman -Syu --noconfirm base-devel
 RUN pacman -S --noconfirm git vim python
 
 # Any other setup steps
+RUN pacman -Syu --noconfirm \
+    && pacman -S --noconfirm \
+    gcc \
+    gdb \
+    cmake \
+    make \
+    clang \
+    boost \
+    libstdc++ \
+    valgrind \
+    doxygen \
+    ninja \
+    && pacman -Scc --noconfirm 
